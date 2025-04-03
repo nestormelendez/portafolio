@@ -1,4 +1,4 @@
-import { Grid2, Button, useTheme, useMediaQuery } from "@mui/material";
+import { Button, useTheme, useMediaQuery, Grid2 } from "@mui/material";
 import TableLista from "../components/docs/TableList";
 import Typography from "@mui/material/Typography";
 import Img from "../components/docs/Img";
@@ -156,7 +156,7 @@ export default function Docs() {
               Caso de uso
             </Button>
             {open ? (
-              <Grid2 >
+              <Grid2>
                 {RfDetalle.map((section) => (
                   <Button
                     key={section.titulo}

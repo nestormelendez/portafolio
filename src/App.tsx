@@ -5,6 +5,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/navbar/Navbar";
 import ArticleIcon from "@mui/icons-material/Article";
+import Works from "./pages/Works";
+import Form from "./pages/Form";
+import Weather from './pages/Weather';
+import Skeletor from "./pages/Skeletor";
 
 function App() {
   type Props = {
@@ -28,6 +32,10 @@ function App() {
         <Route path="/docs" element={<Docs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/works" element={<Works />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/weather" element={<Weather />} />
+        <Route path="/skeletor" element={<Skeletor />} />
       </Routes>
     </>
   );

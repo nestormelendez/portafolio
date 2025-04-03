@@ -39,7 +39,7 @@ export default function Navbar({ navArrayLinks, onclick }: Props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "left" }}>
-            Gecko
+            Nestor Melendez
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "flex" } }}>
             {navArrayLinks.map((item) => (
@@ -57,11 +57,7 @@ export default function Navbar({ navArrayLinks, onclick }: Props) {
         </Toolbar>
       </AppBar>
 
-      <Drawer
-        open={open}
-        anchor="left"
-        onClose={() => setOpen(false)}
-      >
+      <Drawer open={open} anchor="left" onClose={() => setOpen(false)}>
         <NavListDrawer navArrayLinks={navArrayLinks} setOpen={setOpen} />
       </Drawer>
     </>

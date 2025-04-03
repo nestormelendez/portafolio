@@ -4,8 +4,7 @@ import {
   useTransitionStateManager,
   useTransitionTrigger,
 } from "@mui/base/useTransition";
-import { Box } from "@mui/system";
-import { ListItemIcon, ToggleButton } from "@mui/material";
+import { ListItemIcon, ToggleButton, Box} from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import NavListDrawerDocs from "./NavListDrawerDocs";
@@ -30,6 +29,26 @@ const navArrayDocs: PropsDocs[] = [
   {
     title: "Inventario",
     path: "/register",
+    icon: <AppRegistrationIcon />,
+  },
+  {
+    title: "Trabajos",
+    path: "/works",
+    icon: <AppRegistrationIcon />,
+  },
+  {
+    title: "Formulario",
+    path: "/form",
+    icon: <AppRegistrationIcon />,
+  },
+  {
+    title: "Clima",
+    path: "/weather",
+    icon: <AppRegistrationIcon />,
+  },
+  {
+    title: "Skeletor",
+    path: "/skeletor",
     icon: <AppRegistrationIcon />,
   },
 ];
@@ -102,11 +121,7 @@ function Trivia(props: TriviaProps) {
         {label}
       </ToggleButton>
       <TransitionContext.Provider value={contextValue}>
-        <Box
-          id={containerId}
-          aria-hidden={!open}
-          sx={{ p: 1, color: "white" }}
-        >
+        <Box id={containerId} aria-hidden={!open} sx={{ p: 1, color: "white" }}>
           {children}
         </Box>
       </TransitionContext.Provider>

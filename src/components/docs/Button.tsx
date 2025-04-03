@@ -1,15 +1,17 @@
-import { Button as MuiButton } from "@mui/material";
+import { Theme } from "@emotion/react";
+import { Button as MuiButton, SxProps } from "@mui/material";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "text" | "contained" | "outlined";
   href?: string;
-  children: ReactNode
+  children: ReactNode;
+  sx?: SxProps<Theme> | undefined
 };
 
-export  const Button = ({ children, variant = "text", href }: Props) => {
+export  const Button = ({ sx ,children, variant = "text", href }: Props) => {
   return (
-    <MuiButton variant={variant} href={href}>
+    <MuiButton sx={sx} variant={variant} href={href}>
       {children} 
     </MuiButton>
   );
